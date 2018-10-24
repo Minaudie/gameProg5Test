@@ -1,0 +1,35 @@
+Game prog 5 Assign 2
+
+Build an action system that can do and undo actions made by either the player or the computer for use in a turn based game. The action class itself should be virtual and your action system shouldn't care about specifics. Code up a test suite to prove that your solution works. 
+
+PDF with this information: functionPointersMultithreading
+
+std::function<void(int)> someName = some method that matches void(int)
+
+void print(int){} //defined elsewhere
+
+Like function pointers but they have a feature called **bind**
+Bind lets you inject the values into the function you are calling.
+
+take a vector array
+
+Vector<std::function> v
+
+add the reverse command to your vector
+v.push_back(bind(//reverse of what user did))
+
+when they want to undo
+std::function haha = v.pop_back();
+
+get the most recent reverse action
+haha();
+
+then run.
+
+
+https://stackoverflow.com/questions/3860423/need-help-writing-an-undo-redo-function-for-text-editor-program
+https://www.codeproject.com/Tips/790247/Minimal-Undo-An-Undo-Redo-Framework
+https://www.codeproject.com/Articles/43436/Undo-Redo-Framework
+
+http://www.cplusplus.com/reference/vector/vector/push_back/
+http://www.cplusplus.com/reference/vector/vector/pop_back/
